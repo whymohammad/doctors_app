@@ -1,3 +1,4 @@
+import 'package:abc_doctorz/views/doctor_profile/doctor_profile.dart';
 import 'package:abc_doctorz/views/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -11,15 +12,18 @@ class _BottomNavyScreenState extends State<BottomNavyScreen> {
 
   final List<Widget> _tabs = [
     HomeScreen(),
-    Container(color: Colors.amber,),
-    Container(color: Colors.purple,),
-    Container(color: Colors.black12,),
+    Container(
+      color: Colors.amber,
+    ),
+    Container(
+      color: Colors.purple,
+    ),
+    DoctorProfileScreen()
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: _tabs[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white,
@@ -35,7 +39,7 @@ class _BottomNavyScreenState extends State<BottomNavyScreen> {
             _currentIndex = index;
           });
         },
-        items:const  [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',

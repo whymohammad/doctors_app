@@ -1,5 +1,5 @@
 
-import 'package:abc_doctorz/views/auth_screens/register_screen.dart';
+import 'package:abc_doctorz/views/auth/register_screen.dart';
 import 'package:abc_doctorz/views/bottom_navy_screen/bottom_navy_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

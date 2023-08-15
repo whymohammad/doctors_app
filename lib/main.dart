@@ -1,6 +1,8 @@
-import 'package:abc_doctorz/views/auth_screens/register_screen.dart';
+import 'package:abc_doctorz/views/auth/register_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'views/bottom_navy_screen/bottom_navy_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,11 +14,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return  GetMaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-
-      home:  RegisterScreen(),
+      home:BottomNavyScreen()
+      //  RegisterScreen(),
     );
   }
 }
-
