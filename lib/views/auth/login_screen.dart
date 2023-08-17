@@ -1,4 +1,3 @@
-
 import 'package:abc_doctorz/views/auth/register_screen.dart';
 import 'package:abc_doctorz/views/bottom_navy_screen/bottom_navy_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -11,7 +10,6 @@ import '../widgets/custom_richtext.dart';
 import '../widgets/custom_txtfield.dart';
 import '../widgets/headline_text.dart';
 import '../widgets/normal_text.dart';
-
 
 class LoginScreen extends StatefulWidget {
   LoginScreen({Key? key}) : super(key: key);
@@ -86,7 +84,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   alignment: Alignment.centerRight,
                   child: InkWell(
                       onTap: () {
-                      //  Get.to(() => ForgetPasswordScreen());
+                        //  Get.to(() => ForgetPasswordScreen());
                       },
                       child: const NormalText(
                         text: "Forgot Password?",
@@ -100,7 +98,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ? const Center(child: CircularProgressIndicator())
                     : CustomButton(
                         height: 56,
-                        onTap: (){
+                        onTap: () {
                           Get.to(() => BottomNavyScreen());
                         },
                         text: "Login",
@@ -111,7 +109,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Center(
                     child: InkWell(
                         onTap: () {
-                         Get.to(() => RegisterScreen());
+                          Get.to(() => RegisterScreen());
                         },
                         child: const CustomRichText(
                           text1: "Don’t have an account?",

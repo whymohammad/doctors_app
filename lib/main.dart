@@ -1,3 +1,4 @@
+import 'package:abc_doctorz/views/auth/login_screen.dart';
 import 'package:abc_doctorz/views/auth/register_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -16,8 +17,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home:BottomNavyScreen()
-      //  RegisterScreen(),
+      home:
+          // BottomNavyScreen()
+          LoginScreen(),
     );
   }
 }

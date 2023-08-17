@@ -10,6 +10,7 @@ import 'package:abc_doctorz/views/doctor_profile/doc_profile_location_amount.dar
 import 'package:abc_doctorz/views/doctor_profile/profile_specialization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../widgets/custom_linear_progress.dart';
@@ -68,9 +69,14 @@ class _DoctorProfileScreenState extends State<DoctorProfileScreen> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Icon(
-                        Icons.arrow_back_ios,
-                        color: Colors.white,
+                      GestureDetector(
+                        onTap: () {
+                          Get.back();
+                        },
+                        child: const Icon(
+                          Icons.arrow_back_ios,
+                          color: Colors.white,
+                        ),
                       ),
                       Text('Doctor’s Profile',
                           style: GoogleFonts.lato(

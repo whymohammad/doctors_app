@@ -1,5 +1,7 @@
+import 'package:abc_doctorz/views/appoinment/appoinment.dart';
 import 'package:abc_doctorz/views/doctor_profile/doctor_profile.dart';
 import 'package:abc_doctorz/views/home_screen.dart';
+import 'package:abc_doctorz/views/patient_mdeical_record/patient_medical_record.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavyScreen extends StatefulWidget {
@@ -12,12 +14,8 @@ class _BottomNavyScreenState extends State<BottomNavyScreen> {
 
   final List<Widget> _tabs = [
     HomeScreen(),
-    Container(
-      color: Colors.amber,
-    ),
-    Container(
-      color: Colors.purple,
-    ),
+    AppoinmentScreen(),
+    PatientMedicalRecord(),
     DoctorProfileScreen()
   ];
 
