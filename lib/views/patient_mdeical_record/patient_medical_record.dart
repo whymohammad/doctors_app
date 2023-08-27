@@ -1,4 +1,5 @@
 import 'package:abc_doctorz/utils/my_size.dart';
+import 'package:abc_doctorz/views/patient_mdeical_record/helpline_dialog.dart';
 import 'package:abc_doctorz/views/patient_mdeical_record/prescription_tab.dart';
 import 'package:abc_doctorz/views/patient_mdeical_record/report_tab.dart';
 import 'package:flutter/material.dart';
@@ -50,31 +51,36 @@ class _PatientMedicalRecordState extends State<PatientMedicalRecord>
           Align(
             child: Padding(
               padding: EdgeInsets.only(right: MySize.size10),
-              child: Container(
-                height: MySize.size40,
-                width: MySize.size80,
-                decoration: BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.circular(100)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      Icons.phone,
-                      color: Colors.white,
-                      size: MySize.size22,
-                    ),
-                    SizedBox(
-                      width: MySize.size6,
-                    ),
-                    Text(
-                      "Help",
-                      style: GoogleFonts.lato(
-                          color: Colors.white,
-                          fontSize: MySize.size15,
-                          fontWeight: FontWeight.w600),
-                    )
-                  ],
+              child: GestureDetector(
+                onTap: () {
+                  helpline_dialog(context);
+                },
+                child: Container(
+                  height: MySize.size40,
+                  width: MySize.size80,
+                  decoration: BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.circular(100)),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.phone,
+                        color: Colors.white,
+                        size: MySize.size22,
+                      ),
+                      SizedBox(
+                        width: MySize.size6,
+                      ),
+                      Text(
+                        "Help",
+                        style: GoogleFonts.lato(
+                            color: Colors.white,
+                            fontSize: MySize.size15,
+                            fontWeight: FontWeight.w600),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),

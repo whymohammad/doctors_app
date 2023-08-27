@@ -1,16 +1,22 @@
+// ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
   final String? hintText;
-  final bool? isObscure;
-  final Widget? sufixIcon ;
-  final Widget? prefixIcon ;
+   bool isObscure = false;
+  final Widget? sufixIcon;
+  final Widget? prefixIcon;
   void Function(String)? onChanged;
   final TextEditingController? controller;
-   CustomTextField({
-  super.key,this.onChanged,this.controller,this.hintText,this.isObscure,this.sufixIcon,this.prefixIcon
-  });
+  CustomTextField(
+      {super.key,
+      this.onChanged,
+      this.controller,
+      this.hintText,
+      this.isObscure = false,
+      this.sufixIcon,
+      this.prefixIcon});
 
   @override
   Widget build(BuildContext context) {
@@ -32,18 +38,20 @@ class CustomTextField extends StatelessWidget {
         controller: controller,
         obscureText: isObscure!,
         decoration: InputDecoration(
-          prefixIcon: prefixIcon,
-          suffixIcon: sufixIcon,
+            prefixIcon: prefixIcon,
+            suffixIcon: sufixIcon,
             hintText: hintText,
-            hintStyle: const TextStyle(fontSize: 15,fontWeight: FontWeight.w300,color: Color(0xff8391A1)),
-            contentPadding:const EdgeInsets.only(top: 18,left: 18,bottom: 18),
+            hintStyle: const TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w300,
+                color: Color(0xff8391A1)),
+            contentPadding:
+                const EdgeInsets.only(top: 18, left: 18, bottom: 18),
             filled: true,
             fillColor: Colors.white,
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(8),
-                borderSide: BorderSide.none
-            )
-        ),
+                borderSide: BorderSide.none)),
       ),
     );
   }

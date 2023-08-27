@@ -1,7 +1,5 @@
 // ignore_for_file: unused_field, unused_element, prefer_final_fields
 
-import 'dart:io';
-import 'dart:math';
 
 import 'package:abc_doctorz/models/profile_model.dart';
 import 'package:abc_doctorz/utils/app_const.dart';
@@ -133,7 +131,7 @@ class _DoctorProfileScreenState extends State<DoctorProfileScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
+                SizedBox(
                   height: MySize.scaleFactorHeight * 140,
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -185,115 +183,113 @@ class _DoctorProfileScreenState extends State<DoctorProfileScreen> {
                 SizedBox(
                   height: MySize.size30,
                 ),
-                Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('Doctors Checkup',
-                              style: GoogleFonts.lato(
-                                  fontSize: MySize.size14,
-                                  color: const Color(0xff122A3B),
-                                  fontWeight: FontWeight.w400)),
-                          SizedBox(
-                            height: MySize.size15,
-                          ),
-                          Text('Clinic Environment',
-                              style: GoogleFonts.lato(
-                                  fontSize: MySize.size14,
-                                  color: const Color(0xff122A3B),
-                                  fontWeight: FontWeight.w400)),
-                          SizedBox(
-                            height: MySize.size15,
-                          ),
-                          Text('Staff Behavior',
-                              style: GoogleFonts.lato(
-                                  fontSize: MySize.size14,
-                                  color: const Color(0xff122A3B),
-                                  fontWeight: FontWeight.w400)),
-                        ],
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              SizedBox(
-                                height: MySize.scaleFactorHeight * 14,
-                                width: MySize.scaleFactorWidth * 170,
-                                child: MySlider(
-                                  value: _firstsliderValue,
-                                  min: 1,
-                                  max: 100,
-                                  onChanged: _firsthandlerSelection,
-                                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Doctors Checkup',
+                            style: GoogleFonts.lato(
+                                fontSize: MySize.size14,
+                                color: const Color(0xff122A3B),
+                                fontWeight: FontWeight.w400)),
+                        SizedBox(
+                          height: MySize.size15,
+                        ),
+                        Text('Clinic Environment',
+                            style: GoogleFonts.lato(
+                                fontSize: MySize.size14,
+                                color: const Color(0xff122A3B),
+                                fontWeight: FontWeight.w400)),
+                        SizedBox(
+                          height: MySize.size15,
+                        ),
+                        Text('Staff Behavior',
+                            style: GoogleFonts.lato(
+                                fontSize: MySize.size14,
+                                color: const Color(0xff122A3B),
+                                fontWeight: FontWeight.w400)),
+                      ],
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            SizedBox(
+                              height: MySize.scaleFactorHeight * 14,
+                              width: MySize.scaleFactorWidth * 170,
+                              child: MySlider(
+                                value: _firstsliderValue,
+                                min: 1,
+                                max: 100,
+                                onChanged: _firsthandlerSelection,
                               ),
-                              SizedBox(
-                                width: MySize.size8,
+                            ),
+                            SizedBox(
+                              width: MySize.size8,
+                            ),
+                            Text("${_firstsliderValue.toInt()} %",
+                                style: GoogleFonts.lato(
+                                    fontSize: MySize.size12,
+                                    color: const Color(0xff000000),
+                                    fontWeight: FontWeight.w600))
+                          ],
+                        ),
+                        SizedBox(
+                          height: MySize.size15,
+                        ),
+                        Row(
+                          children: [
+                            SizedBox(
+                              height: MySize.scaleFactorHeight * 14,
+                              width: MySize.scaleFactorWidth * 170,
+                              child: MySlider(
+                                value: _secondsliderValue,
+                                min: 1,
+                                max: 100,
+                                onChanged: _secondhandleSliderChange,
                               ),
-                              Text("${_firstsliderValue.toInt()} %",
-                                  style: GoogleFonts.lato(
-                                      fontSize: MySize.size12,
-                                      color: const Color(0xff000000),
-                                      fontWeight: FontWeight.w600))
-                            ],
-                          ),
-                          SizedBox(
-                            height: MySize.size15,
-                          ),
-                          Row(
-                            children: [
-                              SizedBox(
-                                height: MySize.scaleFactorHeight * 14,
-                                width: MySize.scaleFactorWidth * 170,
-                                child: MySlider(
-                                  value: _secondsliderValue,
-                                  min: 1,
-                                  max: 100,
-                                  onChanged: _secondhandleSliderChange,
-                                ),
+                            ),
+                            SizedBox(
+                              width: MySize.size8,
+                            ),
+                            Text("${_secondsliderValue.toInt()} %",
+                                style: GoogleFonts.lato(
+                                    fontSize: MySize.size12,
+                                    color: const Color(0xff000000),
+                                    fontWeight: FontWeight.w600))
+                          ],
+                        ),
+                        SizedBox(
+                          height: MySize.size15,
+                        ),
+                        Row(
+                          children: [
+                            SizedBox(
+                              height: MySize.scaleFactorHeight * 14,
+                              width: MySize.scaleFactorWidth * 170,
+                              child: MySlider(
+                                value: _thirdtsliderValue,
+                                min: 1,
+                                max: 100,
+                                onChanged: _thirdhandleSliderChange,
                               ),
-                              SizedBox(
-                                width: MySize.size8,
-                              ),
-                              Text("${_secondsliderValue.toInt()} %",
-                                  style: GoogleFonts.lato(
-                                      fontSize: MySize.size12,
-                                      color: const Color(0xff000000),
-                                      fontWeight: FontWeight.w600))
-                            ],
-                          ),
-                          SizedBox(
-                            height: MySize.size15,
-                          ),
-                          Row(
-                            children: [
-                              SizedBox(
-                                height: MySize.scaleFactorHeight * 14,
-                                width: MySize.scaleFactorWidth * 170,
-                                child: MySlider(
-                                  value: _thirdtsliderValue,
-                                  min: 1,
-                                  max: 100,
-                                  onChanged: _thirdhandleSliderChange,
-                                ),
-                              ),
-                              SizedBox(
-                                width: MySize.size8,
-                              ),
-                              Text("${_thirdtsliderValue.toInt()} %",
-                                  style: GoogleFonts.lato(
-                                      fontSize: MySize.size12,
-                                      color: const Color(0xff000000),
-                                      fontWeight: FontWeight.w600))
-                            ],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+                            ),
+                            SizedBox(
+                              width: MySize.size8,
+                            ),
+                            Text("${_thirdtsliderValue.toInt()} %",
+                                style: GoogleFonts.lato(
+                                    fontSize: MySize.size12,
+                                    color: const Color(0xff000000),
+                                    fontWeight: FontWeight.w600))
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
                 SizedBox(
                   height: MySize.size30,
@@ -521,6 +517,29 @@ class _DoctorProfileScreenState extends State<DoctorProfileScreen> {
                               fontWeight: FontWeight.w600)),
                     ),
                   ],
+                ),
+                SizedBox(
+                  height: MySize.size20,
+                ),
+                SizedBox(
+                  height: MySize.size20,
+                ),
+                Container(
+                  height: MySize.scaleFactorHeight * 50,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: const Color(0xff012A78),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Book Appoinment",
+                      style: GoogleFonts.lato(
+                          fontSize: MySize.size18,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.white),
+                    ),
+                  ),
                 ),
                 SizedBox(
                   height: MySize.size20,

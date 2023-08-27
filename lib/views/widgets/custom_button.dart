@@ -8,9 +8,12 @@ class CustomButton extends StatelessWidget {
   final Function onTap;
   final double height;
   final double? radius;
-  const CustomButton({
-  super.key,this.text,required this.onTap,required this.height,this.radius
-  });
+  const CustomButton(
+      {super.key,
+      this.text,
+      required this.onTap,
+      required this.height,
+      this.radius});
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +22,8 @@ class CustomButton extends StatelessWidget {
       child: Container(
         height: height,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(radius??8),
-          gradient:  LinearGradient(
+          borderRadius: BorderRadius.circular(radius ?? 8),
+          gradient: LinearGradient(
             begin: Alignment(-1.0, -1.0),
             end: Alignment(1.0, 1.0),
             transform: GradientRotation(90.7),
@@ -31,9 +34,11 @@ class CustomButton extends StatelessWidget {
             ],
           ),
         ),
-        child: Center(child: FittedBox(child: Padding(
+        child: Center(
+            child: FittedBox(
+                child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: RegularText(text: text,color: Colors.white),
+          child: RegularText(text: text, color: Colors.white),
         ))),
       ),
     );

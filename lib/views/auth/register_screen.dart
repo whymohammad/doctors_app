@@ -1,10 +1,11 @@
+// ignore_for_file: avoid_print
+
 import 'dart:io';
 import 'package:abc_doctorz/views/bottom_navy_screen/bottom_navy_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
-import '../widgets/back_arrow_widget.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/custom_richtext.dart';
 import '../widgets/custom_txtfield.dart';
@@ -13,7 +14,7 @@ import '../widgets/normal_text.dart';
 import 'login_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
-  RegisterScreen({Key? key}) : super(key: key);
+  const RegisterScreen({Key? key}) : super(key: key);
 
   @override
   State<RegisterScreen> createState() => _RegisterScreenState();
@@ -75,7 +76,7 @@ bool isLoading = false;
   //
   File? selectedImage;
 
-  ImagePicker _picker = ImagePicker();
+  final ImagePicker _picker = ImagePicker();
 
   getImage(ImageSource source) async {
     final XFile? image = await _picker.pickImage(source: source);
@@ -92,7 +93,7 @@ bool isLoading = false;
         backgroundColor: Colors.white,
       body: SafeArea(
         child: Container(
-            margin: EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+            margin: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
           child: SingleChildScrollView(
             child: Form(
               key: formKey,
@@ -115,9 +116,9 @@ bool isLoading = false;
                           radius: 48,
                           backgroundImage: selectedImage != null
                               ? FileImage(
-                              selectedImage!) // Cast to ImageProvider<Object>
-                              : AssetImage("assets/jon.jpg") as ImageProvider<
-                              Object>, // Cast to ImageProvider<Object>
+                              selectedImage!)
+                              : const AssetImage("assets/jon.jpg") as ImageProvider<
+                              Object>, 
                         ),
                         Positioned(
                             bottom: 0,
@@ -180,7 +181,7 @@ bool isLoading = false;
                   SizedBox(
                     height: Get.height * 0.032,
                   ),
-                 isLoading?Center(child: CircularProgressIndicator()): CustomButton(
+                 isLoading?const Center(child: CircularProgressIndicator()): CustomButton(
                     height: 56,
                     onTap: (){
                       Get.to(()=>BottomNavyScreen());
@@ -223,9 +224,9 @@ bool isLoading = false;
             onTap: () {
               getImage(ImageSource.camera);
             },
-            child: Column(
+            child: const Column(
               children: [
-                const Icon(Icons.camera, color: Colors.green, size: 40),
+                Icon(Icons.camera, color: Colors.green, size: 40),
                 NormalText(text: "Camera"),
               ],
             ),
@@ -234,9 +235,9 @@ bool isLoading = false;
             onTap: () {
               getImage(ImageSource.gallery);
             },
-            child: Column(
+            child: const Column(
               children: [
-                const Icon(Icons.photo, color: Colors.green, size: 40),
+                Icon(Icons.photo, color: Colors.green, size: 40),
                 NormalText(text: "Gallery"),
               ],
             ),

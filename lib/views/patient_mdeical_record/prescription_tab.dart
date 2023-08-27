@@ -1,4 +1,6 @@
+import 'package:abc_doctorz/views/makeAppoinment/make_appoinment.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../utils/my_size.dart';
@@ -92,20 +94,25 @@ class _PrescriptionTabState extends State<PrescriptionTab> {
                   right: 0,
                   bottom: 0,
                   child: Align(
-                    child: Container(
-                      height: MySize.scaleFactorHeight * 50,
-                      width: MySize.scaleFactorWidth * 160,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.grey.withOpacity(0.4),
-                      ),
-                      child: Center(
-                        child: Text(
-                          "Consult Online",
-                          style: GoogleFonts.lato(
-                              color: const Color(0xff012A78),
-                              fontSize: MySize.size16,
-                              fontWeight: FontWeight.w600),
+                    child: GestureDetector(
+                      onTap: () {
+                        Get.to(MakeAppoinment());
+                      },
+                      child: Container(
+                        height: MySize.scaleFactorHeight * 50,
+                        width: MySize.scaleFactorWidth * 160,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.grey.withOpacity(0.4),
+                        ),
+                        child: Center(
+                          child: Text(
+                            "Consult Online",
+                            style: GoogleFonts.lato(
+                                color: const Color(0xff012A78),
+                                fontSize: MySize.size16,
+                                fontWeight: FontWeight.w600),
+                          ),
                         ),
                       ),
                     ),

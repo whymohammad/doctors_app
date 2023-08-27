@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable, camel_case_types, non_constant_identifier_names
+
 import 'package:abc_doctorz/views/doctor_detail_screen.dart';
 import 'package:abc_doctorz/views/widgets/custom_category_title_tilles.dart';
 import 'package:abc_doctorz/views/widgets/headline_text.dart';
@@ -18,8 +20,8 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
       centerTitle: true,
         backgroundColor: Colors.purple,
-        leading: Icon(Icons.menu),
-        title: Text("your Logo"),
+        leading: const Icon(Icons.menu),
+        title: const Text("your Logo"),
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -28,7 +30,7 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: Container(
-        margin: EdgeInsets.only(left: 15,right: 20,top: 15),
+        margin: const EdgeInsets.only(left: 15,right: 20,top: 15),
         child:  SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -36,15 +38,15 @@ class HomeScreen extends StatelessWidget {
                 Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children:  [
-                  RegularText(text: "Hello,Guests!",),
+                  const RegularText(text: "Hello,Guests!",),
                   Align(
                     alignment: Alignment.centerRight,
                       child: Image.asset("assets/city.png",height: 20,width: 40,)),
-                  HeadlineText(title: "Find the Best Doctor Near You",size: 18,color: Colors.purple,)
+                  const HeadlineText(title: "Find the Best Doctor Near You",size: 18,color: Colors.purple,)
                 ],
 
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
               SizedBox(
@@ -55,7 +57,7 @@ class HomeScreen extends StatelessWidget {
                   prefixIcon: Icon(Icons.search,color: Colors.grey.shade400),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
               Container(
@@ -75,14 +77,14 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
-              HeadlineText(title: "Hi,\nAnything\nYou Need",size: 20,),
-              SizedBox(
+              const HeadlineText(title: "Hi,\nAnything\nYou Need",size: 20,),
+              const SizedBox(
                 height: 25,
               ),
-              RegularText(text: "Categories",),
+              const RegularText(text: "Categories",),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -93,7 +95,7 @@ class HomeScreen extends StatelessWidget {
 
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
               Row(
@@ -108,15 +110,15 @@ class HomeScreen extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        HeadlineText(title: "Video Consultion",color: Colors.white,size: 10,),
-                        HeadlineText(title: "PMC Verified Doctors",color: Colors.black,size: 10,),
+                        const HeadlineText(title: "Video Consultion",color: Colors.white,size: 10,),
+                        const HeadlineText(title: "PMC Verified Doctors",color: Colors.black,size: 10,),
                         Align(
                           alignment: Alignment.bottomCenter,
                             child: Image.asset("assets/doc.png"))
                       ],
                     ),
                     ),
-                  SizedBox(width: 15,),
+                  const SizedBox(width: 15,),
                   Container(
                     height: 170,
                     width: 180,
@@ -127,9 +129,9 @@ class HomeScreen extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        HeadlineText(title: "Video Consultion",color: Colors.purple,size: 10,),
-                        HeadlineText(title: "PMC Verified Doctors",color: Colors.black,size: 10,),
-                        SizedBox(
+                        const HeadlineText(title: "Video Consultion",color: Colors.purple,size: 10,),
+                        const HeadlineText(title: "PMC Verified Doctors",color: Colors.black,size: 10,),
+                        const SizedBox(
                           height: 12,
                         ),
                         Align(
@@ -140,7 +142,7 @@ class HomeScreen extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
               Container(
@@ -150,10 +152,10 @@ class HomeScreen extends StatelessWidget {
                   color: Colors.cyan
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
-              CustomCategoryTitleTiles(
+              const CustomCategoryTitleTiles(
                 title: "Symptoms",
               ),
               Row(
@@ -167,10 +169,10 @@ class HomeScreen extends StatelessWidget {
 
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
-              CustomCategoryTitleTiles(
+              const CustomCategoryTitleTiles(
                 title: "Diseases",
               ),
               Row(
@@ -184,42 +186,42 @@ class HomeScreen extends StatelessWidget {
 
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
-              HeadlineText(
+              const HeadlineText(
                 title:"Doctors in pakistan",
                 color: Colors.grey,
                 size: 20,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               InkWell(
                 onTap: (){
-                  Get.to(()=>DoctorDetailScreen());
+                  Get.to(()=>const DoctorDetailScreen());
                 },
-                  child: DoctorsWidget()),
-              SizedBox(
+                  child: const DoctorsWidget()),
+              const SizedBox(
                 height: 10,
               ),
-              DoctorsWidget(),
-              SizedBox(
+              const DoctorsWidget(),
+              const SizedBox(
                 height: 10,
               ),
-              DoctorsWidget(),
-              SizedBox(
+              const DoctorsWidget(),
+              const SizedBox(
                 height: 10,
               ),
-              DoctorsWidget(),
-              SizedBox(
+              const DoctorsWidget(),
+              const SizedBox(
                 height: 25,
               ),
-              HeadlineText(title: "Follow Us",size: 20,),
-              SizedBox(
+              const HeadlineText(title: "Follow Us",size: 20,),
+              const SizedBox(
                 height: 25,
               ),
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 SocialMediaWidget(text: "Subscribers",Followers: "1.2M",imagePath: "assets/Asset 24.png",),
@@ -228,7 +230,7 @@ class HomeScreen extends StatelessWidget {
                 SocialMediaWidget(text: "Followers",Followers: "1.2M",imagePath: "assets/fb.png",),
               ],
             ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
             ],
@@ -243,7 +245,7 @@ class SocialMediaWidget extends StatelessWidget {
   final String imagePath;
   final String Followers;
   final String text;
-   SocialMediaWidget({
+   const SocialMediaWidget({
     super.key,required this.text,required this.imagePath,required this.Followers
   });
 
@@ -254,11 +256,11 @@ class SocialMediaWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Image.asset(imagePath,height: 40,width: 40),
-        SizedBox(
+        const SizedBox(
           height: 5,
         ),
         RegularText(text: Followers,),
-        SizedBox(
+        const SizedBox(
           height: 3,
         ),
         RegularText(text: text,),
@@ -277,7 +279,7 @@ class DoctorsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 80,
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         color: Colors.grey.shade200,
@@ -334,7 +336,7 @@ class categoriesWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
     height: Get.height*0.15,
     width: Get.width*0.2,
              // color: Colors.black,
@@ -343,7 +345,7 @@ class categoriesWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(imagePath,width: 45,height: 45),
-          SizedBox(height: 10,),
+          const SizedBox(height: 10,),
           NormalText(text: title,size: 12,)
         ],
       ),
@@ -359,7 +361,7 @@ class CircleImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: Get.height*0.16,
       width: Get.width*0.2,
       // color: Colors.black,
@@ -378,7 +380,7 @@ class CircleImage extends StatelessWidget {
                   color: Colors.black.withOpacity(0.2),
                   spreadRadius: 1,
                   blurRadius: 2,
-                  offset: Offset(0, 3),
+                  offset: const Offset(0, 3),
                 ),
               ],
             ),
@@ -391,7 +393,7 @@ class CircleImage extends StatelessWidget {
           ),
 
 
-          SizedBox(height: 10,),
+          const SizedBox(height: 10,),
           NormalText(text: title,size: 12,)
         ],
       ),

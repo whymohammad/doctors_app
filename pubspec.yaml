@@ -41,6 +41,8 @@ dependencies:
   flutter_rating_bar: ^4.0.1
   date_picker_timeline: ^1.2.5
   easy_date_timeline: ^0.0.7
+  syncfusion_flutter_charts: ^22.2.9
+  fl_chart: ^0.63.0
 
 dev_dependencies:
   flutter_test:

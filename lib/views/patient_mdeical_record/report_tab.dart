@@ -1,6 +1,8 @@
 import 'package:abc_doctorz/utils/my_size.dart';
+import 'package:abc_doctorz/views/appoinment_confirmation/appoinment_confirmation.dart';
 import 'package:abc_doctorz/views/widgets/custom_linear_progress.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ReportTab extends StatelessWidget {
@@ -74,31 +76,36 @@ class ReportTab extends StatelessWidget {
                   right: 0,
                   bottom: 0,
                   child: Align(
-                    child: Container(
-                      height: MySize.scaleFactorHeight * 50,
-                      width: MySize.scaleFactorWidth * 140,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.grey.withOpacity(0.4),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Icon(
-                            Icons.add,
-                            color: Color(0xff012A78),
-                          ),
-                          SizedBox(
-                            width: MySize.size2,
-                          ),
-                          Text(
-                            "Add Reports",
-                            style: GoogleFonts.lato(
-                                color: const Color(0xff012A78),
-                                fontSize: MySize.size16,
-                                fontWeight: FontWeight.w600),
-                          ),
-                        ],
+                    child: GestureDetector(
+                      onTap: () {
+                        Get.to(AppoinmentConfirmation());
+                      },
+                      child: Container(
+                        height: MySize.scaleFactorHeight * 50,
+                        width: MySize.scaleFactorWidth * 140,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.grey.withOpacity(0.4),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Icon(
+                              Icons.add,
+                              color: Color(0xff012A78),
+                            ),
+                            SizedBox(
+                              width: MySize.size2,
+                            ),
+                            Text(
+                              "Add Reports",
+                              style: GoogleFonts.lato(
+                                  color: const Color(0xff012A78),
+                                  fontSize: MySize.size16,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),

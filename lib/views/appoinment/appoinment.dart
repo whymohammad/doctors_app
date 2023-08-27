@@ -1,6 +1,6 @@
 import 'package:abc_doctorz/utils/my_size.dart';
 import 'package:abc_doctorz/views/appoinment/appoinment_tab.dart';
-import 'package:date_picker_timeline/date_picker_widget.dart';
+import 'package:abc_doctorz/views/appoinment_dash/appoinment_dashboard.dart';
 import 'package:easy_date_timeline/easy_date_timeline.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -113,18 +113,10 @@ class _AppoinmentScreenState extends State<AppoinmentScreen>
           Expanded(
             child: TabBarView(
               controller: _tabController,
-              children:const [
+              children: const [
                 AppoinmentTab(),
-                 Center(
-                  child: Text(
-                    'Buy Now',
-                    style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ),
-                 Center(
+                AppoinmentDashBoard(),
+                Center(
                   child: Text(
                     'Buy Now',
                     style: TextStyle(
