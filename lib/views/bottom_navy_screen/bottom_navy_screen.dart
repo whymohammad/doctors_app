@@ -47,8 +47,8 @@ class _BottomNavyScreenState extends State<BottomNavyScreen> {
             label: 'Appointment',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.call),
-            label: 'Helpline',
+            icon: Icon(Icons.list_alt),
+            label: 'Reports',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),

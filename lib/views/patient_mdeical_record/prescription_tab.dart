@@ -96,7 +96,7 @@ class _PrescriptionTabState extends State<PrescriptionTab> {
                   child: Align(
                     child: GestureDetector(
                       onTap: () {
-                        Get.to(MakeAppoinment());
+                    //    Get.to(MakeAppoinment());
                       },
                       child: Container(
                         height: MySize.scaleFactorHeight * 50,

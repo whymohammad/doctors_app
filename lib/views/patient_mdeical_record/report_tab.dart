@@ -78,7 +78,7 @@ class ReportTab extends StatelessWidget {
                   child: Align(
                     child: GestureDetector(
                       onTap: () {
-                        Get.to(AppoinmentConfirmation());
+                     //   Get.to(AppoinmentConfirmation());
                       },
                       child: Container(
                         height: MySize.scaleFactorHeight * 50,

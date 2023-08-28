@@ -17,7 +17,7 @@ class _AppoinmentScreenState extends State<AppoinmentScreen>
   late TabController _tabController;
   @override
   void initState() {
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController = TabController(length: 2, vsync: this);
     super.initState();
   }
 
@@ -42,33 +42,31 @@ class _AppoinmentScreenState extends State<AppoinmentScreen>
           SizedBox(
             height: MySize.size30,
           ),
-          EasyDateTimeLine(
-            initialDate: DateTime.now(),
-            onDateChange: (selectedDate) {},
-            activeColor: const Color(0xff012A78),
-            headerProps: const EasyHeaderProps(
-                centerHeader: false,
-                showHeader: false,
-                padding: EdgeInsets.all(0)),
-            dayProps: const EasyDayProps(
-              dayStructure: DayStructure.dayNumDayStr,
-              activeBorderRadius: 100,
-              inactiveBorderRadius: 48.0,
-              height: 56.0,
-              width: 56.0,
-              activeDayNumStyle: TextStyle(
-                color: Colors.white,
-                fontSize: 16.0,
-                fontWeight: FontWeight.bold,
-              ),
-              inactiveDayNumStyle: TextStyle(
-                fontSize: 18.0,
-              ),
-            ),
-          ),
-          SizedBox(
-            height: MySize.size30,
-          ),
+          // EasyDateTimeLine(
+          //   initialDate: DateTime.now(),
+          //   onDateChange: (selectedDate) {},
+          //   activeColor: const Color(0xff012A78),
+          //   headerProps: const EasyHeaderProps(
+          //       centerHeader: false,
+          //       showHeader: false,
+          //       padding: EdgeInsets.all(0)),
+          //   dayProps: const EasyDayProps(
+          //     dayStructure: DayStructure.dayNumDayStr,
+          //     activeBorderRadius: 100,
+          //     inactiveBorderRadius: 48.0,
+          //     height: 56.0,
+          //     width: 56.0,
+          //     activeDayNumStyle: TextStyle(
+          //       color: Colors.white,
+          //       fontSize: 16.0,
+          //       fontWeight: FontWeight.bold,
+          //     ),
+          //     inactiveDayNumStyle: TextStyle(
+          //       fontSize: 18.0,
+          //     ),
+          //   ),
+          // ),
+
           Container(
             margin: EdgeInsets.symmetric(horizontal: MySize.size20),
             height: 45,
@@ -104,9 +102,6 @@ class _AppoinmentScreenState extends State<AppoinmentScreen>
                 Tab(
                   text: 'Dashboard',
                 ),
-                Tab(
-                  text: 'Profile',
-                ),
               ],
             ),
           ),
@@ -116,15 +111,6 @@ class _AppoinmentScreenState extends State<AppoinmentScreen>
               children: const [
                 AppoinmentTab(),
                 AppoinmentDashBoard(),
-                Center(
-                  child: Text(
-                    'Buy Now',
-                    style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ),
               ],
             ),
           ),

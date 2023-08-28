@@ -8,6 +8,8 @@ import 'package:abc_doctorz/views/widgets/regular_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'appoinment/appoinment.dart';
+import 'makeAppoinment/make_appoinment.dart';
 import 'widgets/custom_txtfield.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -199,7 +201,7 @@ class HomeScreen extends StatelessWidget {
               ),
               InkWell(
                 onTap: (){
-                  Get.to(()=>const DoctorDetailScreen());
+                  Get.to(()=>const MakeAppoinment());
                 },
                   child: const DoctorsWidget()),
               const SizedBox(
