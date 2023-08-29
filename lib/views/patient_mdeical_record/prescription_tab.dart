@@ -1,4 +1,5 @@
 import 'package:abc_doctorz/views/makeAppoinment/make_appoinment.dart';
+import 'package:abc_doctorz/views/patient_mdeical_record/doctors_prescriptionIlist.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -36,9 +37,14 @@ class _PrescriptionTabState extends State<PrescriptionTab> {
                     left: 0,
                     right: 0,
                     child: Align(
-                        child: Image.asset(
-                      "assets/tabler_edit.png",
-                      scale: 1.7,
+                        child: GestureDetector(
+                      onTap: () {
+                        Get.to(DoctorsPresCriptionList());
+                      },
+                      child: Image.asset(
+                        "assets/tabler_edit.png",
+                        scale: 1.7,
+                      ),
                     ))),
                 Positioned(
                     top: MySize.scaleFactorHeight * 120,
@@ -96,7 +102,7 @@ class _PrescriptionTabState extends State<PrescriptionTab> {
                   child: Align(
                     child: GestureDetector(
                       onTap: () {
-                    //    Get.to(MakeAppoinment());
+                        //    Get.to(MakeAppoinment());
                       },
                       child: Container(
                         height: MySize.scaleFactorHeight * 50,

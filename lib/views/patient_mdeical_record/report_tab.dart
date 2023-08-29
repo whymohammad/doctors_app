@@ -1,5 +1,6 @@
 import 'package:abc_doctorz/utils/my_size.dart';
 import 'package:abc_doctorz/views/appoinment_confirmation/appoinment_confirmation.dart';
+import 'package:abc_doctorz/views/patient_mdeical_record/patient_report_list.dart';
 import 'package:abc_doctorz/views/widgets/custom_linear_progress.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -31,9 +32,14 @@ class ReportTab extends StatelessWidget {
                     left: 0,
                     right: 0,
                     child: Align(
-                        child: Image.asset(
-                      "assets/tabler_edit.png",
-                      scale: 1.7,
+                        child: GestureDetector(
+                      onTap: () {
+                        Get.to(PatientReportList());
+                      },
+                      child: Image.asset(
+                        "assets/tabler_edit.png",
+                        scale: 1.7,
+                      ),
                     ))),
                 Positioned(
                     top: MySize.scaleFactorHeight * 120,
@@ -78,7 +84,7 @@ class ReportTab extends StatelessWidget {
                   child: Align(
                     child: GestureDetector(
                       onTap: () {
-                     //   Get.to(AppoinmentConfirmation());
+                        //   Get.to(AppoinmentConfirmation());
                       },
                       child: Container(
                         height: MySize.scaleFactorHeight * 50,
