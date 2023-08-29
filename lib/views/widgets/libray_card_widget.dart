@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable, use_full_hex_values_for_flutter_colors
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -55,7 +57,7 @@ class LibraryCard extends StatelessWidget {
                   children: [
                     Text(
                       storyTitle,
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.w500,
                           color: Color(0xff4D506C)),
@@ -67,7 +69,7 @@ class LibraryCard extends StatelessWidget {
                       children: [
                         Expanded(
                           flex: 3,
-                          child: Container(
+                          child: SizedBox(
                             height: 2,
                             width: double.infinity,
                             child: SliderTheme(
@@ -75,7 +77,7 @@ class LibraryCard extends StatelessWidget {
                                   trackHeight: 2,
                                   thumbColor: Colors.transparent,
                                   overlayShape: SliderComponentShape.noOverlay,
-                                  thumbShape: RoundSliderThumbShape(
+                                  thumbShape: const RoundSliderThumbShape(
                                       enabledThumbRadius: 0.0)),
                               child: Slider(
                                 value: percentage,
@@ -88,13 +90,13 @@ class LibraryCard extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 5,
                         ),
                         Expanded(
                             child: Text(
                           "${percentage.toStringAsFixed(0)}%",
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontSize: 9, fontWeight: FontWeight.w400),
                         )),
                       ],
@@ -106,16 +108,16 @@ class LibraryCard extends StatelessWidget {
                       children: [
                         Row(
                           children:  [
-                            Image(
+                            const Image(
                                 image: AssetImage("assets/icons/lib.png"),
                                 height: 15,
                                 width: 15),
-                            SizedBox(
+                            const SizedBox(
                               width: 5,
                             ),
                             Text(
                               "${storyChapters.toString()} parts",
-                              style: TextStyle(
+                              style: const TextStyle(
                                   color: Color(0xffF8A170),
                                   fontWeight: FontWeight.w500,
                                   fontSize: 10),

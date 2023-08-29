@@ -31,13 +31,13 @@ class _ChartsState extends State<Charts> {
     return Scaffold(
         body: SfCartesianChart(
             primaryXAxis: CategoryAxis(
-              majorGridLines: MajorGridLines(width: 0),
+              majorGridLines: const MajorGridLines(width: 0),
             ),
             primaryYAxis: NumericAxis(
               minimum: 0,
               maximum: 24,
               interval: 6,
-              majorTickLines: MajorTickLines(size: 0),
+              majorTickLines: const MajorTickLines(size: 0),
             ),
             tooltipBehavior: _tooltip,
             series: <ChartSeries<_ChartData, String>>[

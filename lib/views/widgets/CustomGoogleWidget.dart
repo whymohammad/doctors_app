@@ -1,11 +1,10 @@
+// ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
 
 class CustomGoogleWidget extends StatelessWidget {
   final Function onTap;
-  const CustomGoogleWidget({
-  super.key,required this.onTap
-  });
+  const CustomGoogleWidget({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -13,11 +12,12 @@ class CustomGoogleWidget extends StatelessWidget {
       onTap: () => onTap(),
       child: Container(
         height: 56,
-        decoration:  BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(8),
-         border: Border.all(color: Color(0xffE8ECF4),)
-        ),
+        decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(8),
+            border: Border.all(
+              color: const Color(0xffE8ECF4),
+            )),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -28,8 +28,13 @@ class CustomGoogleWidget extends StatelessWidget {
                 fit: BoxFit.contain,
               ),
             ),
-            SizedBox(width: 5,),
-            Center(child: Text( 'Continue with Google',)),
+            const SizedBox(
+              width: 5,
+            ),
+            const Center(
+                child: Text(
+              'Continue with Google',
+            )),
           ],
         ),
       ),

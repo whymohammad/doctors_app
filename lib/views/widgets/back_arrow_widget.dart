@@ -16,7 +16,7 @@ class BackArrowWIdget extends StatelessWidget {
         alignment: Alignment.topLeft,
         width: 40,
         height: 40,
-        child: Icon(Icons.arrow_back_ios,size: 20,),
+        child: const Icon(Icons.arrow_back_ios,size: 20,),
       ),
     );
   }

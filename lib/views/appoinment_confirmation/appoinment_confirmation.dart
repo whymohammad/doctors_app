@@ -154,7 +154,7 @@ class _AppoinmentConfirmationState extends State<AppoinmentConfirmation> {
                           fontWeight: FontWeight.w500,
                           color: Colors.white),
                     ),
-                    Container(
+                    SizedBox(
                       height: MySize.size10,
                       width: MySize.size10,
                     )
@@ -234,7 +234,7 @@ class _AppoinmentConfirmationState extends State<AppoinmentConfirmation> {
                         borderRadius: BorderRadius.circular(12),
                         boxShadow: [
                           BoxShadow(
-                              offset: Offset(1, 3),
+                              offset: const Offset(1, 3),
                               blurRadius: 10,
                               spreadRadius: 1,
                               color: Colors.black.withOpacity(0.1))
@@ -255,7 +255,7 @@ class _AppoinmentConfirmationState extends State<AppoinmentConfirmation> {
                       height: MySize.size50,
                       width: MySize.scaleFactorWidth * 130,
                       decoration: BoxDecoration(
-                        color: Color(0xff012A78),
+                        color: const Color(0xff012A78),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Center(

@@ -397,7 +397,7 @@ class _FilterResultState extends State<FilterResult> {
                         borderRadius: BorderRadius.circular(12),
                         boxShadow: [
                           BoxShadow(
-                              offset: Offset(1, 3),
+                              offset: const Offset(1, 3),
                               blurRadius: 10,
                               spreadRadius: 1,
                               color: Colors.black.withOpacity(0.1))
@@ -418,7 +418,7 @@ class _FilterResultState extends State<FilterResult> {
                       height: MySize.size50,
                       width: MySize.scaleFactorWidth * 130,
                       decoration: BoxDecoration(
-                        color: Color(0xff012A78),
+                        color: const Color(0xff012A78),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Center(

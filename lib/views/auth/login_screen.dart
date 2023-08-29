@@ -1,6 +1,7 @@
+// ignore_for_file: avoid_print, prefer_const_constructors
+
 import 'package:abc_doctorz/views/auth/register_screen.dart';
 import 'package:abc_doctorz/views/bottom_navy_screen/bottom_navy_screen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,7 +13,7 @@ import '../widgets/headline_text.dart';
 import '../widgets/normal_text.dart';
 
 class LoginScreen extends StatefulWidget {
-  LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -31,7 +32,7 @@ class _LoginScreenState extends State<LoginScreen> {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Container(
-          margin: EdgeInsets.symmetric(horizontal: 20),
+          margin: const EdgeInsets.symmetric(horizontal: 20),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -109,7 +110,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Center(
                     child: InkWell(
                         onTap: () {
-                          Get.to(() => RegisterScreen());
+                          Get.to(() => const RegisterScreen());
                         },
                         child: const CustomRichText(
                           text1: "Don’t have an account?",

@@ -29,14 +29,14 @@ class CustomTextField extends StatelessWidget {
             color: Colors.grey.withOpacity(0.3),
             spreadRadius: 0.5,
             blurRadius: 2,
-            offset: Offset(0, 2),
+            offset: const Offset(0, 2),
           ),
         ],
       ),
       child: TextFormField(
         onChanged: onChanged,
         controller: controller,
-        obscureText: isObscure!,
+        obscureText: isObscure,
         decoration: InputDecoration(
             prefixIcon: prefixIcon,
             suffixIcon: sufixIcon,

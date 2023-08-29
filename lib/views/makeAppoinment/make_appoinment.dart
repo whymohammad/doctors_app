@@ -2,7 +2,6 @@ import 'package:abc_doctorz/models/appoinment_date_model.dart';
 import 'package:abc_doctorz/models/appoinment_morning_time.dart';
 import 'package:abc_doctorz/utils/my_size.dart';
 import 'package:abc_doctorz/views/appoinment_confirmation/appoinment_confirmation.dart';
-import 'package:abc_doctorz/views/filterResult/filter_result.dart';
 import 'package:abc_doctorz/views/makeAppoinment/take_consultation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

@@ -184,7 +184,7 @@ bool isLoading = false;
                  isLoading?const Center(child: CircularProgressIndicator()): CustomButton(
                     height: 56,
                     onTap: (){
-                      Get.to(()=>BottomNavyScreen());
+                      Get.to(()=>const BottomNavyScreen());
                     },
                     text: "Register",
                   ),
@@ -194,7 +194,7 @@ bool isLoading = false;
                   Center(
                       child: InkWell(
                           onTap: () {
-                            Get.to(() => LoginScreen());
+                            Get.to(() => const LoginScreen());
                           },
                           child: const CustomRichText(
                             text1: "Already have an account?",

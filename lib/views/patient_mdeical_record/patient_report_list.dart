@@ -118,8 +118,46 @@ class _PatientReportListState extends State<PatientReportList> {
                       ],
                     ),
                   );
-                })
+                }),
           ],
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: EdgeInsets.only(bottom: MySize.size30),
+        child: Container(
+          margin: EdgeInsets.symmetric(horizontal: MySize.size22),
+          height: MySize.scaleFactorHeight * 55,
+          width: MySize.scaleFactorWidth * 100,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: Colors.white,
+              boxShadow: [
+                BoxShadow(
+                    blurRadius: 10,
+                    spreadRadius: 0,
+                    color: Colors.black.withOpacity(0.2))
+              ]),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.add,
+                size: MySize.size28,
+                color: const Color(0xff012A78),
+              ),
+              SizedBox(
+                width: MySize.size10,
+              ),
+              Text(
+                "Add Reports",
+                style: GoogleFonts.lato(
+                  fontSize: MySize.size15,
+                  fontWeight: FontWeight.w500,
+                  color: const Color(0xff012A78),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

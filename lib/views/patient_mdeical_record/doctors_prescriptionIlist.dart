@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:abc_doctorz/models/doctors_prescription_model.dart';
 import 'package:abc_doctorz/utils/my_size.dart';
 import 'package:flutter/material.dart';

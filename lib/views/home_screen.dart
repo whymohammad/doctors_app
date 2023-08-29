@@ -1,6 +1,5 @@
 // ignore_for_file: must_be_immutable, camel_case_types, non_constant_identifier_names
 
-import 'package:abc_doctorz/views/doctor_detail_screen.dart';
 import 'package:abc_doctorz/views/widgets/custom_category_title_tilles.dart';
 import 'package:abc_doctorz/views/widgets/headline_text.dart';
 import 'package:abc_doctorz/views/widgets/normal_text.dart';
@@ -8,7 +7,6 @@ import 'package:abc_doctorz/views/widgets/regular_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'appoinment/appoinment.dart';
 import 'makeAppoinment/make_appoinment.dart';
 import 'widgets/custom_txtfield.dart';
 

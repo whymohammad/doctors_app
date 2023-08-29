@@ -12,17 +12,17 @@ class DoctorDetailScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.purple,
-        title: Text("Dr Abdul Raziq",style: TextStyle(color: Colors.white)),
+        title: const Text("Dr Abdul Raziq",style: TextStyle(color: Colors.white)),
       ),
       body: Column(
         children: [
           SizedBox(height: Get.height*0.03,),
           Container(
             height: Get.height*0.18,
-            padding: EdgeInsets.all(10),
-            margin: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
+            margin: const EdgeInsets.all(10),
             color: Colors.white,
-            child: Row(
+            child: const Row(
               children: [
                 CircleAvatar(
                   backgroundColor: Colors.purple,
